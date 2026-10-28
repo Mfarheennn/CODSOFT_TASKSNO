@@ -1,0 +1,147 @@
+/* General settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #171827, #302449);
+    color: white;
+}
+
+/* Calculator container */
+.calculator {
+    width: 100%;
+    max-width: 350px;
+    padding: 24px;
+    border-radius: 24px;
+    background: #202033;
+    border: 1px solid #44405c;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+/* Header */
+.calculator-header {
+    margin-bottom: 25px;
+}
+
+.calculator-header h2 {
+    color: #b6a0ff;
+    font-size: 24px;
+}
+
+.calculator-header p {
+    margin-top: 5px;
+    color: #aaa7bd;
+    font-size: 13px;
+}
+
+/* Display */
+.display {
+    min-height: 100px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+    background: #151522;
+    text-align: right;
+    overflow: hidden;
+}
+
+#previous {
+    min-height: 22px;
+    margin-bottom: 8px;
+    color: #aaa7bd;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+#result {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 32px;
+    text-align: right;
+}
+
+/* Button grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.buttons button {
+    min-width: 0;
+    min-height: 55px;
+    border: none;
+    border-radius: 12px;
+    background: #303047;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.buttons button:hover {
+    background: #45415f;
+}
+
+.buttons button:active {
+    transform: scale(0.96);
+}
+
+.buttons .utility {
+    background: #414057;
+    color: #d5caff;
+}
+
+.buttons .operator {
+    background: #45375f;
+    color: #d5c4ff;
+}
+
+.buttons .equal {
+    background: #a58aff;
+    color: #1b1630;
+}
+
+.buttons .equal:hover {
+    background: #b8a4ff;
+}
+
+.buttons .zero {
+    grid-column: span 2;
+}
+
+/* Footer */
+footer {
+    margin-top: 22px;
+    color: #aaa7bd;
+    font-size: 11px;
+    text-align: center;
+}
+
+/* Mobile screens */
+@media (max-width: 380px) {
+    .calculator {
+        padding: 17px;
+    }
+
+    .buttons {
+        gap: 7px;
+    }
+
+    .buttons button {
+        min-height: 50px;
+    }
+}
